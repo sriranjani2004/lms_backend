@@ -9,12 +9,12 @@ app.use(express.json());
 app.use(cors());
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'librarymanagement'
+  host: 'library-project-sriranjania2004-0677.a.aivencloud.com',
+  user: 'avnadmin',
+  password: 'AVNS_MFT-ZoJunIZRKw_BG8c',
+  database: 'defaultdb',
+  port: '16947'
 });
-
 connection.connect((err) => {
   if (err) throw err;
   console.log('Connected to MySQL database');
