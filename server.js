@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
@@ -78,6 +78,6 @@ app.delete('/deleteBook', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0",() => {
   console.log(`Server is running on port ${port}`);
 });
